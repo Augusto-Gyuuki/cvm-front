@@ -92,11 +92,6 @@
     align-items: center;
     justify-content: center;
 }
-a.input-button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-}
 .instructions {
     display: flex;
     flex-direction: column;
@@ -106,11 +101,6 @@ a.input-button {
     width: 40%;
     align-self: center;
 }
-
-
-
-
-
 .lds-facebook {
     display: inline-block;
     position: relative;
