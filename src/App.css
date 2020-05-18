@@ -101,6 +101,25 @@
     width: 40%;
     align-self: center;
 }
+
+@media (max-width: 500px){
+    .box {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .right {
+        margin: 100px 0 ;
+    }
+    .file {
+        height: 150px;
+    }
+    .instructions {
+        width: 95%;
+        height: 80%;
+    }
+}
+
 .lds-facebook {
     display: inline-block;
     position: relative;
