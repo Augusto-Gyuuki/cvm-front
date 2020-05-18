@@ -54,7 +54,7 @@
     height: 60px;
 }
 .input-button {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     width: 360px;
     height: 50px;
     box-shadow: 0px 1px 0px 0px #1c1b18;
@@ -120,7 +120,7 @@ a.input-button {
         margin: 110px 0 45px;
     }
     .input{
-        margin-bottom: -40px;
+        margin-bottom: 0px;
     }
     .file {
         height: 150px;
@@ -130,6 +130,9 @@ a.input-button {
         width: 85%;
         height: 100%;
         margin-left: 35px;
+    }
+    .input-button + a {
+
     }
     
     

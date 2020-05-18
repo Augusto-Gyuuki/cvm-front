@@ -24,7 +24,7 @@ const App = () => {
         setLoading(false)
     }
     useEffect(async() => {
-        await Axios.get('https://cvm-project.herokuapp.com/cdi')
+        // await Axios.get('https://cvm-project.herokuapp.com/cdi')
         setPageLoading(false)
     },[])
     const spinner = <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
@@ -47,11 +47,8 @@ const App = () => {
                     <div className="title">CVM Project</div>
                 </div>
                 <div className="box">
-                    <div className="left">
-                        <div className="instructions">
-                            Adicione um arquivo .csv ou .tsv com o seguinte formato: <br/><br/>
-                            <img src={instructionsFile} className='instructions-img' alt="instruções do arquivo"/>
-                        </div>
+                    <div className="right">
+                        No maximo arquivos com até 100 CNPJs <br/><br/> Tempo de espera : ~ 1 minuto
                     </div>
                     <div className="input">
                         <label className='file'>
@@ -61,8 +58,11 @@ const App = () => {
                         {loading ? null : <button className='input-button' disabled={file ? false : true} onClick={() => { handleSubmit() }}>{file ? 'Gerar Relatorio' : 'Insira um Arquivo'}</button>}
                         {loading ? spinner  : haveRelat}
                     </div>
-                    <div className="right">
-                        No maximo arquivos com até 100 CNPJs <br/><br/> Tempo de espera : ~ 1 minuto
+                    <div className="left">
+                        <div className="instructions">
+                            Adicione um arquivo .csv ou .tsv com o seguinte formato: <br/><br/>
+                            <img src={instructionsFile} className='instructions-img' alt="instruções do arquivo"/>
+                        </div>
                     </div>
                 </div>
             </div>
