@@ -28,7 +28,7 @@
 .left {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
 .input {
     display: flex;
@@ -90,10 +90,18 @@
 .right {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-right: 80px;
+}
+a.input-button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
 }
 .instructions {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     font-size: 20px;
 }
@@ -101,7 +109,6 @@
     width: 40%;
     align-self: center;
 }
-
 @media (max-width: 500px){
     .box {
         display: flex;
@@ -109,17 +116,24 @@
         height: 100vh;
     }
     .right {
-        margin: 100px 0 ;
+        justify-content: center;
+        margin: 110px 0 45px;
+    }
+    .input{
+        margin-bottom: -40px;
     }
     .file {
         height: 150px;
+        width: 300px;
     }
     .instructions {
-        width: 95%;
-        height: 80%;
+        width: 85%;
+        height: 100%;
+        margin-left: 35px;
     }
+    
+    
 }
-
 .lds-facebook {
     display: inline-block;
     position: relative;
