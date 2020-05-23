@@ -24,7 +24,7 @@ const App = () => {
         setLoading(false)
     }
     useEffect(async() => {
-        // await Axios.get('https://cvm-project.herokuapp.com/cdi')
+        await Axios.get('https://cvm-project.herokuapp.com/cdi')
         setPageLoading(false)
     },[])
     const spinner = <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
