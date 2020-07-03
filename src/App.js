@@ -4,14 +4,17 @@ import fileIcon from './assets/file.png'
 import plusIcon from './assets/plus.png'
 import instructionsFile from './assets/Screenshot from 2020-05-18 14-55-05.png'
 import Axios from 'axios';
-import { useEffect } from 'react';
 
 const App = () => {
     const [file, setFile] = useState()
     const [relatorio, setRelatorio] = useState()
     const [pageLoading, setPageLoading] = useState(true)
     const [loading, setLoading] = useState()
-
+    
+    setInterval(async() => {
+        await Axios.get('https://cvm-project.herokuapp.com/cdi')
+    }, 43200000);
+    
     const handleSubmit = async() => {
         setRelatorio(null)
         setLoading(true)
@@ -23,10 +26,7 @@ const App = () => {
         setRelatorio(data)
         setLoading(false)
     }
-    useEffect(async() => {
-        await Axios.get('https://cvm-project.herokuapp.com/cdi')
-        setPageLoading(false)
-    },[])
+    
     const spinner = <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     const loadingPage = <div class="lds-facebook"><div></div><div></div><div></div></div>
     
