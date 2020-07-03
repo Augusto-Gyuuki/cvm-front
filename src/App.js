@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import fileIcon from './assets/file.png'
 import plusIcon from './assets/plus.png'
@@ -14,6 +14,10 @@ const App = () => {
     setInterval(async() => {
         await Axios.get('https://cvm-project.herokuapp.com/cdi')
     }, 43200000);
+    
+    useEffect(() => {
+        setPageLoading(false)    
+    }, [])
     
     const handleSubmit = async() => {
         setRelatorio(null)
