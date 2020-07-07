@@ -11,11 +11,9 @@ const App = () => {
     const [pageLoading, setPageLoading] = useState(true)
     const [loading, setLoading] = useState()
     
-    setInterval(async() => {
-        await Axios.get('https://cvm-project.herokuapp.com/cdi')
-    }, 43200000);
     
-    useEffect(() => {
+    useEffect(async() => {
+        await Axios.get('https://cvm-project.herokuapp.com/cdi')
         setPageLoading(false)    
     }, [])
     
