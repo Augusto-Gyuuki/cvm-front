@@ -12,8 +12,11 @@ const App = () => {
     const [loading, setLoading] = useState()
     
     
-    useEffect(async() => {
-        await Axios.get('https://cvm-project.herokuapp.com/cdi')
+    useEffect(() => {
+        async function fetchData(){
+            await Axios.get('https://cvm-project.herokuapp.com/cdi')
+        }
+        fetchData()
         setPageLoading(false)    
     }, [])
     
