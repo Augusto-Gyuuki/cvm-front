@@ -15,6 +15,7 @@ const App = () => {
     useEffect(() => {
         async function fetchData(){
             await Axios.get('https://cvm-project.herokuapp.com/cdi')
+            console.log("CDI")
         }
         fetchData()
         setPageLoading(false)    
